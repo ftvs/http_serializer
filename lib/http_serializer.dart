@@ -15,7 +15,8 @@ class HttpSerializer {
   final String baseUrl;
   final http.Client _client;
 
-  HttpSerializer({this.baseUrl, final http.Client client}) : _client = client;
+  HttpSerializer({@required this.baseUrl, @required final http.Client client})
+    : _client = client;
 
   Future<T> get<T>(
       final String endpoint, final InstanceCreator<T> create, [final int id])
